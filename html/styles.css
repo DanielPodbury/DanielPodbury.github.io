@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(206, 206, 206) !important;
+    background-color: rgb(21, 20, 29) !important;
     color: white !important;
 }
 
@@ -40,3 +40,8 @@ overflow-y: scroll;
     width: 100%;
     height: 100px;
 }
+
+code {
+    display: block;
+    white-space: pre-wrap   
+  }
