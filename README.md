@@ -1,20 +1,18 @@
-# COSC2803 Week01 Starter Code
-This repository contains the starter code and practice for using Git + GitHub Classrooms.
+# COSC2803 Week02 Starter Code
+This repository contains the starter code and practice for HTML + CSS.
 
-## Java Example
-Contained in the folder 'java'.
-This is for practicing how to:
-* Clone an assignment repository from GitHub Classroom
-* Modify the Java example on your own
-* Push the code changes to your personal assignment
-* "Submit" your updated code back to the GitHub Classroom
 
-## HTML Example
-Contained in the folder 'html'.
-This is a simple template for a basic HTML site. This is the HTML for Julie's page Version 1. You are able to use this HTML as a starting point for creating your own page in the Project Workshop for Week 01.
+## HTML + CSS Base Example (Julie v3)
+
+This is the starter example for a based HTML site with some basic CSS. This is the based on the HTML+CSS for Julie's page Version 3. You are able to use this as a starting point for creating your own page in the Project Workshop for Week 02.
+
+You should note the following about this example
+* The CSS is contained *inline* with the HTML
+* The image has been modified
+* The full webpage is not provided this time, only a subset of the example
 
 # Authors
 * Dr. Timothy Wiley, School of Computing Technologies, STEM College, RMIT University.
 * A/Prof. Julie Porteous, School of Computing Technologies, STEM College, RMIT University.
 
-Copyright RMIT Unversity (c) 2021
+Copyright RMIT University (c) 2021
