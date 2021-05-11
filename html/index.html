@@ -15,12 +15,13 @@
 
     </div>
     <!--Mobile Nav-->
-    <div class="mobile-nav">
+    <div class="mobile-nav unexpanded">
+      <div id="hambuger" style="width: 50px;text-align: end;  margin-left: auto;margin-right: 50px;font-size: 3em; padding-left:20px; padding-right:20px">≡</div>
       <a class="nav-link hidden" href="index.html">Home</a>
 
-      <a class="nav-link nav-other hidden" href="about.html">About</a>
-      <a class="nav-link nav-other hidden" href="css.html">HTML/CSS</a>
-      <a class="nav-link nav-other hidden" href="gumtree.html">Gumtree Redesign</a>
+      <a class="nav-link hidden" href="about.html">About</a>
+      <a class="nav-link hidden" href="css.html">HTML/CSS</a>
+      <a class="nav-link hidden" href="gumtree.html">Gumtree Redesign</a>
 
     </div>
 
@@ -45,12 +46,11 @@
     <div class="grad"></div>
 
     <script>
-      document.getElementsByClassName('mobile-nav')[0].addEventListener('click', toggleNav)
-      //TODO: replace with hamburger
+      document.getElementById('hambuger').addEventListener('click', toggleNav)
       
       function toggleNav(){
         
-        var navLinks = document.getElementsByClassName('nav-other');
+        var navLinks = document.getElementsByClassName('nav-link');
         for (var i=0; i < navLinks.length; i++){
           var isHidden = false;
 
@@ -66,9 +66,12 @@
           if(isHidden){
             console.log('unhide')
             navLinks[i].classList.remove('hidden')
+            document.getElementsByClassName('mobile-nav')[0].classList.add('unexpanded')
+
           } else {
             console.log('hide')
             navLinks[i].classList.add('hidden')
+            document.getElementsByClassName('mobile-nav')[0].classList.remove('unexpanded')
           }
           
           

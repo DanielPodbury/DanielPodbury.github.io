@@ -108,10 +108,7 @@ code {
     width:200px;
     
 }
-.mobile-nav {
-    display: none;
-    height: 100px;
-}
+
 
 .innerpage {
     border:0px solid red;
@@ -138,7 +135,9 @@ td, th {
     justify-content: left; 
     top:20px;
 }
-
+.mobile-nav {
+    display: none;
+}
 
 
 @media screen and (max-width: 992px) {
@@ -149,10 +148,14 @@ td, th {
     .main {
         width: 100%;
     }
+    
     .mobile-nav {
         display: block;
         overflow-y: scroll;
         font-size: 2em;
+    }
+    .mobile-nav.unexpanded{
+        height: 100px;
     }
     .mobile-nav .nav-link{
         text-align: center;
