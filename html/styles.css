@@ -2,6 +2,8 @@ body {
     background-color: rgb(21, 20, 29) !important;
     color: white !important;
     height: 100vh;
+    font-family: Roboto;
+    margin: 0px !important;
 }
 
 .nav-link {
@@ -10,6 +12,7 @@ body {
     text-decoration: none;
     color: white;
     user-select: none;
+    padding: 5px 5px 5px 0;
 }
 .nav-link:hover {
 
@@ -45,6 +48,7 @@ body {
     left: 0;
     width: 100%;
     height: 100px;
+    z-index: -1;
 }
 
 code {
@@ -68,3 +72,106 @@ code {
 .bio .col-8 {
     margin-left:50px;
 }
+/*////////////////////////////////////*/
+
+.main {
+    border: 0px solid blue;
+    width: 70%;
+    height:80vh;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.main::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.top {
+    height: 100px;
+    border: 0px solid white;
+    width:70%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.pagetitle {
+    font-size:3em;
+}
+
+.nav2 {
+    width:200px;
+    
+}
+.mobile-nav {
+    display: none;
+    height: 100px;
+}
+
+.innerpage {
+    border:0px solid red;
+    margin-left: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    background-color: #1d1c24;
+    min-height: 36px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+td, th {
+    width:100px;
+    
+}
+.titlebar {
+    display:flex;
+    margin-left:200px;
+    position: relative; 
+    justify-content: left; 
+    top:20px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .top {
+        width: 100%;
+        height: 20em;
+    }
+    .main {
+        width: 100%;
+    }
+    .mobile-nav {
+        display: block;
+        overflow-y: scroll;
+        font-size: 2em;
+    }
+    .mobile-nav .nav-link{
+        text-align: center;
+        font-size: 2em;
+    }
+    .nav2 {
+        display: none;
+    }
+    .innerpage {
+        margin-left: 0px;
+        height: 100vh;
+    }
+    .titlebar {
+        margin-left:0px;
+        justify-content: center;
+        font-size: 2.5em;
+        flex-direction: column;
+    }
+    .hidden {
+        display: none;
+    }
+  }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="trading.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top">
+     
+    </div>
+    <div class="nav">
+     
+    </div>
+
+    <div class="banner sub">
+      <div style="display:flex; justify-content: center;">
+        <div><h1>I want to...</h1></div>
+      </div>
+      <div style="display:flex;justify-content: center;">
+        
+        <button class="main-choice">Sell</button>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content: center;">
+      <div><h2 style="margin:10px 0 10px 0">What are you selling?</h2></div>
+    </div>
+    <div style="width:100%;">
+      <div class="pop-items">
+        <div style="color:white">Popular items:</div>
+        <div><a>Caravan</a></div>
+        <div><a>Puppies</a></div>
+        <div><a>Couch</a></div>
+        <div><a>Fridge</a></div>
+        <div><a>Puppy</a></div>
+        <div><a>Room Rent</a></div>
+        <div><a>Car</a></div>
+      </div>
+    </div>
+
+    <div class="selling">
+      <div class="box" style="width:70%;color:white;">
+        <form>
+          <h3>Are you selling and item or service?</h3>
+          <input type="radio" id="item" name="sale-type" value="item" checked="true">
+          <label for="item">Item</label><br>
+          <input type="radio" id="service" name="sale-type" value="service">
+          <label for="service">Service</label><br>
+
+          <div id="service-section" hidden="true">
+            <h3>What kind of service is it?</h3>
+
+            <select name="cars" id="cars" style="height:50px; font-size:1em; border-radius:10px; color:white; background-color: #292B2B;">
+              <option>All Catagories</option>
+              <option>Automotive</option>
+              <option>Building & Construction</option>
+              <option>Cleaning</option>
+              <option>Dress Making & Alteration</option>
+              <option>Hiring</option>
+              <option>Learning & Tutoring</option>
+              <option>Jobs</option>
+            </select>
+
+            <input type="text" placeholder="Title for the service" style="height:45px; width: 500px; font-size:1em; margin-left: 10px;">
+
+          </div>
+          <div id="item-section">
+            <h3>What kind of item is it?</h3>
+
+            <select name="cars" id="cars" style="height:50px; font-size:1em; border-radius:10px; color:white; background-color: #292B2B;">
+              <option value="volvo">All Catagories</option>
+              <option value="saab">Art & Collectables</option>
+              <option value="mercedes">Bady & Children</option>
+              <option value="audi">Books, Music & Games</option>
+              <option value="volvo">Cars & Vehicles</option>
+              <option value="saab">Clothes & Jewellery</option>
+              <option value="mercedes">Electronics & Computer</option>
+            </select>
+
+            <input type="text" placeholder="Title for the item" style="height:45px; width: 500px; font-size:1em; margin-left: 10px;">
+
+          </div>
+
+
+          <div style="padding-top:20px; display:flex; width:100%">
+            <div style="width:30%">
+              Add Photos
+            </div>
+            <div style="width:70%">
+              Description
+            </div>
+          </div>
+
+          <div style="padding-top:20px; display:flex; width:100%">
+            <div style="width:30%">
+              <input type="file" placeholder="Describe you listing...">
+            </div>
+            <div style="width:70%">
+              <textarea placeholder="Describe you listing..." style="height:150px; width: 90%; font-size:1em; margin-left: 0px;border-radius: 10px;padding:10px"></textarea>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content: flex-end;margin-top:20px">
+            <button class="post-listing"><h3>Post Listing</h3></button>
+          </div>
+          
+        </form>
+
+
+
+      </div>
+
+
+      <div class="box" style="width:405px" >
+        <div style="display:flex;justify-content: center;color:white;">
+          <h3 style="font-weight: 100">Other listings in catagory</h3>
+        </div>
+
+        <div style="display:flex;flex-wrap: wrap;">
+          <div class="other-item"><img src="../img/car1.png"></div>
+          <div class="other-item"><img src="../img/car2.png"></div>
+          <div class="other-item"><img src="../img/car1.png"></div>
+          <div class="other-item"><img src="../img/car2.png"></div>
+          <div class="other-item"><img src="../img/car1.png"></div>
+        </div>
+      </div>
+    </div>
+
+      
+    </div>
+
+    <script>
+      document.getElementById('item').addEventListener('input', show_item_field)
+      function show_item_field(e) {
+          if (e.target.checked) { //item selected
+            
+            document.getElementById('item-section').hidden = false;
+            document.getElementById('service-section').hidden = true;
+          }
+      }
+      document.getElementById('service').addEventListener('input', show_service_field)
+      function show_service_field(e) {
+          if (e.target.checked) { //item selected
+            
+            document.getElementById('item-section').hidden = true;
+            document.getElementById('service-section').hidden = false;
+          }
+      }
+    </script>
+  </body>
+</html>
